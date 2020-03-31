@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D2E26622-3926-4FE5-86BC-236EF0FB998F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CloudKitJournal/Controllers/Model Controllers/EntryController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "saveEntryWith(title:body:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "01F27521-B053-4272-AF46-123633276BCA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -30,9 +14,9 @@
             filePath = "CloudKitJournal/Controllers/Model Controllers/EntryController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "saveEntryWith(title:body:completion:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "save(entry:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

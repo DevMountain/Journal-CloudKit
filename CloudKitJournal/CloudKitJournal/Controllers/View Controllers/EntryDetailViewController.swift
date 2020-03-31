@@ -27,6 +27,7 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        /// assignt he EntryDetailViewController to be the delegate for the titleTextField
         titleTextField.delegate = self
     }
     
