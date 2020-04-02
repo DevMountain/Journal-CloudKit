@@ -15,6 +15,11 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bodyTextField: UITextView!
     
     // MARK: - Properties
+    
+    /**
+    Use the didSet property observer to monitor changes to the entry properties value being set. Once the value of the entry property is set, we want to updateViews so the user sees the updated information. This needs to happen on the Main thread.
+     */
+    
     var entry: Entry? {
         didSet {
             DispatchQueue.main.async {
