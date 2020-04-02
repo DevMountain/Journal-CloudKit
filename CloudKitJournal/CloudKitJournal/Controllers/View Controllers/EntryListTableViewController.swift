@@ -10,16 +10,24 @@ import UIKit
 
 class EntryListTableViewController: UITableViewController {
 
+    
+    // MARK: - Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        /// call the fetchEntriesWith method on your Entry Controller
         EntryController.sharedInstance.fetchEntriesWith { (result) in
+            /// call the updateViews method when we have completed with our result
             self.updateViews()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        /// call the reloadData method on the tableView to reload your rows and sections
         tableView.reloadData()
     }
+    
+    // MARK: - Class Methods
     
     func updateViews() {
         DispatchQueue.main.async {
