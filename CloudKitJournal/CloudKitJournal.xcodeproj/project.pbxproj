@@ -13,6 +13,12 @@
 		85858B8D242D081400C5ECA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8C242D081400C5ECA2 /* Assets.xcassets */; };
 		85858B90242D081400C5ECA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8E242D081400C5ECA2 /* LaunchScreen.storyboard */; };
 		85858BA0242D0A9200C5ECA2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85858B9F242D0A9200C5ECA2 /* CloudKit.framework */; };
+		D02B559C2469EE0900C72BB6 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B559B2469EE0900C72BB6 /* Entry.swift */; };
+		D02B559E2469F31600C72BB6 /* Entry Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B559D2469F31600C72BB6 /* Entry Controller.swift */; };
+		D02B55A02469F4BF00C72BB6 /* EntryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B559F2469F4BF00C72BB6 /* EntryError.swift */; };
+		D02B55A2246A074900C72BB6 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B55A1246A074900C72BB6 /* EntryListTableViewController.swift */; };
+		D02B55A4246A085400C72BB6 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B55A3246A085400C72BB6 /* EntryDetailViewController.swift */; };
+		D02B55A6246A21E800C72BB6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02B55A5246A21E800C72BB6 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		85858B91242D081400C5ECA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitJournal.entitlements; sourceTree = "<group>"; };
 		85858B9F242D0A9200C5ECA2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D02B559B2469EE0900C72BB6 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D02B559D2469F31600C72BB6 /* Entry Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry Controller.swift"; sourceTree = "<group>"; };
+		D02B559F2469F4BF00C72BB6 /* EntryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryError.swift; sourceTree = "<group>"; };
+		D02B55A1246A074900C72BB6 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		D02B55A3246A085400C72BB6 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		D02B55A5246A21E800C72BB6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +71,11 @@
 		85858B82242D081200C5ECA2 /* CloudKitJournal */ = {
 			isa = PBXGroup;
 			children = (
+				D02B559A2469EDA200C72BB6 /* Helpers + Extensions */,
+				D02B55992469ED9900C72BB6 /* Model */,
+				D02B55962469ED8300C72BB6 /* Controllers */,
+				D02B55952469ED6F00C72BB6 /* Views */,
 				85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */,
-				85858B89242D081200C5ECA2 /* Main.storyboard */,
 				85858B97242D082D00C5ECA2 /* Resources */,
 			);
 			path = CloudKitJournal;
@@ -84,6 +99,57 @@
 				85858B9F242D0A9200C5ECA2 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D02B55952469ED6F00C72BB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85858B89242D081200C5ECA2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D02B55962469ED8300C72BB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D02B55982469ED9300C72BB6 /* Model Controller */,
+				D02B55972469ED8C00C72BB6 /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D02B55972469ED8C00C72BB6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D02B55A1246A074900C72BB6 /* EntryListTableViewController.swift */,
+				D02B55A3246A085400C72BB6 /* EntryDetailViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		D02B55982469ED9300C72BB6 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D02B559D2469F31600C72BB6 /* Entry Controller.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		D02B55992469ED9900C72BB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D02B559B2469EE0900C72BB6 /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D02B559A2469EDA200C72BB6 /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D02B559F2469F4BF00C72BB6 /* EntryError.swift */,
+				D02B55A5246A21E800C72BB6 /* DateExtension.swift */,
+			);
+			path = "Helpers + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02B559C2469EE0900C72BB6 /* Entry.swift in Sources */,
+				D02B55A6246A21E800C72BB6 /* DateExtension.swift in Sources */,
+				D02B55A02469F4BF00C72BB6 /* EntryError.swift in Sources */,
+				D02B55A2246A074900C72BB6 /* EntryListTableViewController.swift in Sources */,
 				85858B84242D081200C5ECA2 /* AppDelegate.swift in Sources */,
 				85858B86242D081200C5ECA2 /* SceneDelegate.swift in Sources */,
+				D02B55A4246A085400C72BB6 /* EntryDetailViewController.swift in Sources */,
+				D02B559E2469F31600C72BB6 /* Entry Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,13 +376,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = FXHHZQB8GN;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junior.JournalCK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,13 +395,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = FXHHZQB8GN;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Junior.JournalCK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
