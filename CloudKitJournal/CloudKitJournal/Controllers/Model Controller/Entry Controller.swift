@@ -62,6 +62,7 @@ class EntryController {
             
             print("fetched all Entries successfully")
             let entries = records.compactMap({ Entry(ckRecord: $0) })
+            print(entries)
             self.entries = entries
             completion(.success(entries))
         }
