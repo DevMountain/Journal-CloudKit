@@ -156,7 +156,7 @@ Your Detail View should follow the ‘updateViews’ pattern for updating the vi
 * Add an optional `entry` property to the class (this will be our “landing pad”)
 * Add a UIViewController scene to Main.storyboard and set the class to `EntryDetailViewController`
 * Add a UITextField for the entry’s title text to the top of the scene, add an outlet to the class file called `titleTextField`, and set the delegate relationship
-*(To set the delegate relationship control-drag from the UITextField to the current view controller in the scene dock or call*  `myTextField.delegate = self` *in the view controller* `ViewDidLoad` *functions)*
+*(To set the delegate relationship control-drag from the UITextField to the current view controller in the scene dock or call*  `titleTextField.delegate = self` *in the view controller* `ViewDidLoad` *functions)*
 * Add an extension to `EntryDetailViewController` with conformance to the `UITextFieldDelegate`
 * Implement the delegate function `textFieldShouldReturn`  and resign first responder to dismiss the keyboard
 * Add a UITextView for the entry’s body text beneath the title text field and add an outlet to the class file `bodyTextView`.
